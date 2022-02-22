@@ -1,0 +1,33 @@
+{
+  "name": "node-tronapi",
+  "version": "1.0.0",
+  "description": "tronapi nodejs client.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --harmony -R spec -r co-mocha -t 40000 test/*.test.js",
+    "test-cov": "node --harmony node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -r co-mocha -t 40000 test/*.test.js",
+    "test-travis": "node --harmony node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly -- -r co-mocha -t 40000 test/*.test.js"
+  },
+  "dependencies": {
+    "axios": "^0.26.0"
+  },
+  "homepage": "https://github.com/GG4mida/tronapi-demo-node",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/GG4mida/tronapi-demo-node.git"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "keywords": [
+    "tronapi"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "co-mocha": "^1.2.2",
+    "istanbul-harmony": "^0.3.16",
+    "mocha": "^9.2.1",
+    "should": "^13.2.3",
+    "string-random": "^0.1.3"
+  }
+}
