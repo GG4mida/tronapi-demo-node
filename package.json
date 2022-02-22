@@ -1,7 +1,7 @@
 {
-  "name": "node-tronapi",
+  "name": "tronapi-node",
   "version": "1.0.0",
-  "description": "tronapi nodejs client.",
+  "description": "tronapi node.js client.",
   "main": "index.js",
   "scripts": {
     "test": "mocha --harmony -R spec -r co-mocha -t 40000 test/*.test.js",
