@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --harmony -R spec -r co-mocha -t 40000 test/*.test.js",
-    "test-cov": "node --harmony node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -r co-mocha -t 40000 test/*.test.js",
-    "test-travis": "node --harmony node_modules/.bin/istanbul cover node_modules/.bin/_mocha --report lcovonly -- -r co-mocha -t 40000 test/*.test.js"
+    "test-cov": "node --harmony node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -r co-mocha -t 40000 test/*.test.js"
   },
   "dependencies": {
     "axios": "^0.26.0"

@@ -1,13 +1,5 @@
 # Tronapi nodejs client.
 
-[![build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
-
-[travis-image]: https://img.shields.io/travis/repo-utils/gitlab.svg?style=flat-square
-[travis-url]: https://travis-ci.org/repo-utils/gitlab
-[coveralls-image]: https://img.shields.io/coveralls/repo-utils/gitlab.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/repo-utils/gitlab?branch=master
-
 这是 `tronapi` 的 `node.js` 开发包。用于简化商户接入 `tronapi` 的接口服务。
 
 ## 链接
@@ -99,6 +91,27 @@ const client = new Tronapi({
 ```
 
 
+
+
+
+
+
+
+
+
+## 测试
+
+配置 `test/client.js` 中的 `public_key` & `private_key`，然后执行：
+
+```bash
+npm run test
+```
+
+or 
+
+```bash
+npm run test-cov
+```
 
 ## 联系
 

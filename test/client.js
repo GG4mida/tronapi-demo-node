@@ -3,9 +3,8 @@
 const Tronapi = require('../lib');
 
 const tronapiClient = new Tronapi({
-  host: 'https://pro.tronapi.com',
-  public_key: '',
-  private_key: '',
+  public_key: '', // your public key
+  private_key: '', // your private key
 });
 
 module.exports = tronapiClient;
