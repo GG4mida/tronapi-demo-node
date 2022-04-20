@@ -6,14 +6,13 @@ const stringRandom = require('string-random');
 
 describe('transaction.test.js', function () {
   describe('transaction.create()', function () {
-    it('should return transaction data', async function () {
+    it('should transaction.create() works', async function () {
       const res = await client.transaction.create({
         amount: 100,
         currency: 'CNY',
-        coin_code: 'FAU',
+        coin_code: 'USDT',
         order_id: stringRandom(12),
       });
-
       res.success.should.equal(true);
       res.data.should.have.keys(
         'token', 
@@ -31,7 +30,7 @@ describe('transaction.test.js', function () {
   });
 
   describe('transaction.query()', function () {
-    it('should return transaction info', async function () {
+    it('should transaction.query() works', async function () {
       const res = await client.transaction.query({
         token: '2cb78fae349641c692d1fd9ddf1da61f'
       });

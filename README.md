@@ -33,7 +33,7 @@ const client = new Tronapi({
   client.transaction.create({
     amount: 100,
     currency: 'CNY', // CNY or USD
-    coin_code: 'USDT', // USDT or FAU
+    coin_code: 'USDT', // 固定为 USDT
     order_id: 'your order id',
   }).then((res)=> {
     console.info('res:', res); // 订单数据
@@ -52,52 +52,59 @@ const client = new Tronapi({
   });
 ```
 
-### 账户
+### 收款地址
 
-- 账户查询
+- 收款地址查询
 
-> 接口文档：https://doc.tronapi.com/api/wallet/query.html
+> 接口文档：https://doc.tronapi.com/api/address/query.html
 
 ```js
-  client.account.query().then((res)=> {
+  client.address.list().then((res)=> {
+    console.info('res:', res); // 地址信息
+  });
+```
+
+- 收款地址配置
+
+> 接口文档：https://doc.tronapi.com/api/address/add.html
+
+```js
+  client.address.add('your wallet address').then((res)=> {
+    console.info('res:', res); // 操作结果
+  });
+```
+
+- 收款地址生成
+
+> 接口文档：https://doc.tronapi.com/api/address/generate.html
+
+```js
+  client.address.generate().then((res)=> {
+    console.info('res:', res); // 地址信息
+  });
+```
+
+- 收款地址生成 & 替换
+
+> 接口文档：https://doc.tronapi.com/api/address/generate_add.html
+
+```js
+  client.address.generate_add().then((res)=> {
+    console.info('res:', res); // 地址信息
+  });
+```
+
+### 账户
+
+- 余额查询
+
+> 接口文档：https://doc.tronapi.com/api/account/balance.html
+
+```js
+  client.account.balance().then((res)=> {
     console.info('res:', res); // 账户信息
   });
 ```
-
-- 提现申请
-
-> 接口文档：https://doc.tronapi.com/api/wallet/withdrawal_create.html
-
-```js
-  client.account.withdrawal({
-    amount: 99999,
-    coin_code: 'USDT', // USDT or FAU
-    address: 'TMjPvTqvtURND6Lm2xtzT9hbwHYeHnUUbh'
-  }).then((res)=> {
-    console.info('res:', res); // 提现信息
-  });
-```
-
-- 提现查询
-
-> 接口文档：https://doc.tronapi.com/api/wallet/withdrawal_query.html
-
-```js
-  client.account.withdrawal_query({
-    token: 'your withdrawal token'
-  }).then((res)=> {
-    console.info('res:', res); // 提现状态
-  });
-```
-
-
-
-
-
-
-
-
-
 
 ## 测试
 
@@ -115,4 +122,5 @@ npm run test-cov
 
 ## 联系
 
-可通过 [官网](https://doc.tronapi.com) `右下角` 反馈功能和我们取得联系。
+- 可通过 [官网](https://doc.tronapi.com) `右下角` 反馈功能和我们取得联系。
+- telegram: jackslowfak
